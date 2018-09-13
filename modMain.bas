@@ -357,7 +357,7 @@ Public Sub CenterC(frm As Form)
       frm.Caption = Space(Int(SpcF / 2)) + oldc
    Else
       'if the form is too small for spaces
-      frm.Caption = oldc
+      frm.Caption = oldc 
    End If
 End Sub
 'end
