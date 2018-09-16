@@ -34,9 +34,7 @@ Sub CheckNum()
 						If Cells(intRow, 7).Value = Cells(1, 2).Value Then
 							Range(Cells(intRow, 7), Cells(intRow, 7)).Interior.Color = RGB(255, 0, 0)
 						Else
-							Range(Cells(intRow, 7), Cells(intRow, 7)).Interior.Pattern = xlNone
-							Range(Cells(intRow, 7), Cells(intRow, 7)).Interior.TintAndShade = 0
-							Range(Cells(intRow, 7), Cells(intRow, 7)).Interior.PatternTintAndShade = 0
+							CellFill(intRow,7)
 						End If
 					End If
 				End If
@@ -46,3 +44,8 @@ Sub CheckNum()
 	Next intRow
 End Sub
 
+Sub CellFill(sintRow, sintCol)
+	Range(Cells(sintRow, sintCol), Cells(sintRow, sintCol)).Interior.Pattern = xlNone
+	Range(Cells(sintRow, sintCol), Cells(sintRow, sintCol)).Interior.TintAndShade = 0
+	Range(Cells(sintRow, sintCol), Cells(sintRow, sintCol)).Interior.PatternTintAndShade = 0
+End Sub
